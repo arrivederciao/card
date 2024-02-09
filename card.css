@@ -1,0 +1,104 @@
+body {
+    background-color: #f8f7f4;
+
+}
+
+
+/* alt+shift+F ile sayfayı düzenle. transform-rotate z ile arkasını çevir */
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: center;
+    width: 60vh;
+    height: 35vh;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+background: linear-gradient(145deg, #f0f0f0, #cacaca);
+box-shadow:  15px 15px 30px #969696,
+             -15px -15px 30px #ffffff;
+    
+    /*outline: 1px solid red;*/
+ 
+}
+.front-face{
+    visibility: visible;
+    border-radius: 9px;
+    transition: .2s step-end;
+    color: #444;
+    
+}
+.back-face{
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    border-radius: 9px;
+    transition: .2s step-end;
+
+    
+}
+.card-container:hover{
+    filter: none;
+    backdrop-filter: none;
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+    transition: 1s;
+    transition-timing-function: linear;
+
+}
+.card-container:hover .front-face{
+    visibility: hidden;
+    transition: .2s step-end;
+    position: absolute;
+}
+.card-container:hover .back-face{
+    
+    visibility: visible;
+    transition: .2s step-end;
+    position: absolute;
+}
+.back-face *{
+    rotate: y 180deg;
+    
+    font-family: 'myfont', cursive;
+}
+.text{
+    font-family: myfont;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    font-size: 33px;
+    color: #212121;
+    text-shadow: 4px 4px 8px #f0f0f0;
+
+}
+.art{
+    width: 60vh;
+    height: 35vh;
+    border-radius: 25px;
+
+}
+
+.logo{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+}
+
+/*.logo {
+    position: absolute;
+    top: 35%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    height: 100px;
+    width: 100px;
+
+
+}*/
